@@ -1,0 +1,7 @@
+name: TestSMP
+version: '1.0'
+main: com.axurionstudios.testSMP.TestSMP
+api-version: '1.21'
+authors: [ Axurion Studios ]
+description: A tutorial SMP plugin.
+website: https://axurionstudios.com/
