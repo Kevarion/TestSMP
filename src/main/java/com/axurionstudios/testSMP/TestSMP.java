@@ -10,7 +10,6 @@ import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-@SuppressWarnings("LombokGetterMayBeUsed")
 public final class TestSMP extends JavaPlugin {
 
     @Getter private static TestSMP instance;
@@ -19,10 +18,6 @@ public final class TestSMP extends JavaPlugin {
     @Getter private static GemManager gemManager;
 
     private PaperCommandManager commandManager;
-
-    public static TestSMP getInstance() {
-        return instance;
-    }
 
     @Override
     public void onEnable() {
@@ -43,6 +38,7 @@ public final class TestSMP extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        Bukkit.getConsoleSender().sendMessage(Component.text("Disabled!", NamedTextColor.RED));
+        dataManager.saveDataConfig();
     }
 }
